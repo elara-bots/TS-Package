@@ -19,5 +19,15 @@ module.exports = {
     ],
     "rules": {
         "@typescript-eslint/no-empty-function": 0,
-    }
-}
+        "@typescript-eslint/ban-ts-comment": 0,
+        "semi": ["error", "always"],
+        "curly": ["error", "all"],
+        "@typescript-eslint/no-var-requires": 0,
+        "object-shorthand": "error",
+    },
+    "ignorePatterns": [
+        "dist/*",
+        "docs/*",
+        "node_modules/*"
+    ]
+};

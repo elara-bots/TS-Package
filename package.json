@@ -6,7 +6,7 @@
   "author": "SUPERCHIEFYT (Elara-Discord-Bots, Elara-Services)",
   "license": "ISC",
   "scripts": {
-    "build": "tsc && npx typedoc src/index.ts",
+    "build": "rm -rf dist && rm -rf docs && tsc && npx typedoc src/index.ts",
     "pub": "npm run build && npm publish",
     "lint": "eslint .",
     "prettier:format": "prettier --write src/**/*.ts",
@@ -14,10 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elara-bots/npm/tree/main/bridge"
+    "url": "https://github.com/elara-bots/npm/tree/main/example"
   },
   "files": [
-    "dist"
+    "dist",
+    "docs"
   ],
   "devDependencies": {
     "@types/node": "^20.3.0",
