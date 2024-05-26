@@ -10,6 +10,11 @@ const log = (...args: unknown[]) => console.log(`[${new Date().toLocaleString("e
         throw new Error(`You didn't provide any params to setup`);
     }
     const find = (name: string) => args.find((c) => c.startsWith(name.toLowerCase()))?.split?.("=")?.[1] || "";
+    const git = find("git");
+    if (git) {
+        log(`Removing the .git folder.`);
+        await execSync(`npm run clean`);
+    }
     log(`Installing all default packages... one moment`);
     await execSync(`npm i`);
     await sleep();
