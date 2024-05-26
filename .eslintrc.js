@@ -1,7 +1,7 @@
 module.exports = {
     "env": {
         "node": true,
-        "es2021": true
+        "ES2021": true
     },
     "extends": [
         "eslint:recommended",
@@ -24,6 +24,7 @@ module.exports = {
         "curly": ["error", "all"],
         "@typescript-eslint/no-var-requires": 0,
         "object-shorthand": "error",
+        "no-warning-comments": "warn",
     },
     "ignorePatterns": [
         "dist/*",

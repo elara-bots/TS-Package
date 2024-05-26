@@ -8,10 +8,12 @@
   "scripts": {
     "build": "rm -rf dist && rm -rf docs && tsc && npx typedoc src/index.ts",
     "pub": "npm run build && npm publish",
+    "firstpub": "npm run build && npm publish --access=public",
     "lint": "eslint .",
     "pf": "prettier --write src/**/*.ts",
     "pc": "prettier --check src/**/*.ts",
-    "clean": "rm -rf .git"
+    "clean": "rm -rf .git",
+    "conf": "ts-node setup.ts"
   },
   "repository": {
     "type": "git",
