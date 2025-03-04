@@ -12,6 +12,8 @@
         "importHelpers": true,
     },
     "exclude": [
-        "setup.ts"
+        "dist",
+        "docs",
+        "node_modules"
     ]
 }
